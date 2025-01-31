@@ -7,7 +7,7 @@ import random
 
 def merge_sort(arr):
     """Sort an array using merge sort"""
-    if len(arr) == 1:
+    if len(arr) == 1 or len(arr) == 0:
         return arr
 
     half = len(arr) // 2
