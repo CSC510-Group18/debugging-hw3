@@ -2,16 +2,20 @@ from hw2_debugging import merge_sort
 
 
 def test_merge_sort_random():
-    assert merge_sort([3, 1, 2, 5, 4]) == [1, 2, 3, 4, 5]
+    array = [3, 1, 2, 5, 4]
+    assert merge_sort(array) == sorted(array)
 
 
 def test_merge_sort_sorted():
-    assert merge_sort([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+    arr = [1, 2, 3, 4, 5]
+    assert merge_sort(arr) == arr
 
 
 def test_merge_sort_empty():
-    assert merge_sort([]) == []
+    arr = []
+    assert merge_sort(arr) == arr
 
 
 def test_merge_sort_single():
-    assert merge_sort([1]) == [1]
+    arr = [1]
+    assert merge_sort(arr) == arr
