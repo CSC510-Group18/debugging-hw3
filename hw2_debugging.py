@@ -64,8 +64,8 @@ if __name__ == "__main__":
     assert sorted(sample_array) == merge_sort(sample_array), "Merge sort is not working"
 
     idx = random.randint(0, len(sample_array) - 1)
-    item = sample_array[idx]
+    x = sample_array[idx]
 
-    assert idx == linear_search(sample_array, item), "Linear search is not working"
+    assert idx == linear_search(sample_array, x), "Linear search is not working"
 
     print("All tests passed!")
