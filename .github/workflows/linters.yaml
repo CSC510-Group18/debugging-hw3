@@ -25,4 +25,5 @@ jobs:
     - name: Run linters
       run: |
           pylint --recursive=y .
+          pyflakes .
 
