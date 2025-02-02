@@ -1,4 +1,4 @@
-name: Run Python Tests
+name: Run Python Linters
 on:
   push:
     branches: [ "**" ]
@@ -6,7 +6,7 @@ on:
     branches: [ "**" ]
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +22,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r ./requirements.txt
     
-    - name: Run tests
+    - name: Run linters
       run: |
-        pytest
+          pylint --recursive=y .
+          pyflakes .
+
