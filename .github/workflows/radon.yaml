@@ -1,0 +1,17 @@
+name: Run Radon
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  radon:
+    runs-on: ubuntu-latest
+
+    name: "radon"
+    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: davidslusser/actions_python_radon@v1.0.0
